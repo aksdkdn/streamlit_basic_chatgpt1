@@ -53,7 +53,7 @@ st.markdown(
     """
     <div style="text-align:center; padding:20px 0;">
         <h2>Virtual Assistant</h2>
-        <p style="color:gray;">도상원의 챗팅방 입니다./p>
+        <p style="color:gray;"><도상원의 챗팅방 입니다.</p>
     </div>
     """,
     unsafe_allow_html=True
@@ -66,7 +66,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = [
         {
             "role": "assistant",
-            "content": "안녕하세요. 무엇을 도와드릴까요?"
+            "content": "질문해라"
         }
     ]
 
@@ -80,7 +80,7 @@ for msg in st.session_state.messages:
 # -----------------------------
 # 6. 사용자 입력창 (하단 고정)
 # -----------------------------
-user_input = st.chat_input("메시지를 입력하세요")
+user_input = st.chat_input("메시지를 입력해라")
 
 # -----------------------------
 # 7. GPT 호출
@@ -96,7 +96,7 @@ if user_input:
 
     # GPT 응답
     with st.chat_message("assistant"):
-        with st.spinner("생각중..."):
+        with st.spinner("생각중임..."):
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=st.session_state.messages
