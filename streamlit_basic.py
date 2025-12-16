@@ -42,7 +42,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # -----------------------------
 st.set_page_config(
     page_title="Virtual Assistant",
-    page_icon="🤖",
+    page_icon="👺👺👺",
     layout="centered"
 )
 
@@ -53,7 +53,7 @@ st.markdown(
     """
     <div style="text-align:center; padding:20px 0;">
         <h2>Virtual Assistant</h2>
-        <p style="color:gray;">AI 기반 챗봇 도우미</p>
+        <p style="color:gray;">도상원의 챗팅방 입니다./p>
     </div>
     """,
     unsafe_allow_html=True
